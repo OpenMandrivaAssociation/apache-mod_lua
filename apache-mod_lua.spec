@@ -6,7 +6,7 @@
 Summary:	Mod_lua is a DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	0.5
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		System/Servers
 License:	MIT
 URL:		http://sourceforge.net/projects/mod-lua/
