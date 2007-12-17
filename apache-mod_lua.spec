@@ -21,7 +21,6 @@ Requires:	apache >= 2.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	liblua-devel >= 5.1
 BuildRequires:	file
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 mod_lua is a content generate module for Apache2. It can run in three modes
