@@ -6,12 +6,13 @@
 Summary:	A module to embed lua in apache
 Name:		apache-%{mod_name}
 Version:	0.5
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		System/Servers
 License:	MIT
 URL:		http://sourceforge.net/projects/mod-lua/
 Source0:	http://kent.dl.sourceforge.net/sourceforge/mod-lua/%{mod_name}-%{version}.tgz
 Source1:	%{mod_conf}
+Patch0:		mod_lua-format_not_a_string_literal_and_no_format_arguments.diff
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
 Requires(pre):	apache-conf >= 2.2.0
@@ -46,6 +47,8 @@ cp %{SOURCE1} %{mod_conf}
 # strip away annoying ^M
 find . -type f|xargs file|grep 'CRLF'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
+
+%patch0 -p0
 
 %build
 pushd src
