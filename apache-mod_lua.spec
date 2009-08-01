@@ -6,7 +6,7 @@
 Summary:	A module to embed lua in apache
 Name:		apache-%{mod_name}
 Version:	0.5
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		System/Servers
 License:	MIT
 URL:		http://sourceforge.net/projects/mod-lua/
