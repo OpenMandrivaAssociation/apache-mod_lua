@@ -1,0 +1,11 @@
+--- src/apache2_lib.c	2009-01-07 10:20:57.000000000 +0100
++++ src/apache2_lib.c.oden	2009-01-07 10:21:52.000000000 +0100
+@@ -678,7 +678,7 @@ static int ap2_log_error (lua_State *L) 
+ 	const char *message = luaL_checkstring (L, 1);
+ 	int level = str2level (luaL_optstring (L, 2, ""));
+ 	apr_status_t status = (apr_status_t) luaL_optnumber (L, 3, APR_SUCCESS);
+-	ap_log_error (APLOG_MARK, level, status, r->server, message);
++	ap_log_error (APLOG_MARK, level, status, r->server, "%s", message);
+ 	return 0;
+ }
+ 
