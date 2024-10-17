@@ -9,7 +9,7 @@ Version:	0.5
 Release:	%mkrel 12
 Group:		System/Servers
 License:	MIT
-URL:		http://sourceforge.net/projects/mod-lua/
+URL:		https://sourceforge.net/projects/mod-lua/
 Source0:	http://kent.dl.sourceforge.net/sourceforge/mod-lua/%{mod_name}-%{version}.tgz
 Source1:	%{mod_conf}
 Patch0:		mod_lua-format_not_a_string_literal_and_no_format_arguments.diff
